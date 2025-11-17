@@ -13,21 +13,6 @@ export default defineConfig({
   image: {
     domains: ["images.unsplash.com"],
   },
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "de", "es", "fa", "fr", "ja", "zh-cn"],
-    fallback: {
-      de: "en",
-      es: "en",
-      fa: "en",
-      fr: "en",
-      ja: "en",
-      "zh-cn": "en",
-    },
-    routing: {
-      prefixDefaultLocale: false,
-    },
-  },
   prefetch: true,
   integrations: [
     sitemap({
