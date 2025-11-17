@@ -14,15 +14,20 @@ export default defineConfig({
     domains: ["images.unsplash.com"],
   },
   i18n: {
-     defaultLocale: "en",
-     locales: ["en", "fr"],
-     fallback: {
-       fr: "en",
-     },
-     routing: {
-       prefixDefaultLocale: false,
+    defaultLocale: "en",
+    locales: ["en", "de", "es", "fa", "fr", "ja", "zh-cn"],
+    fallback: {
+      de: "en",
+      es: "en",
+      fa: "en",
+      fr: "en",
+      ja: "en",
+      "zh-cn": "en",
     },
-   },
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   prefetch: true,
   integrations: [
     sitemap({
@@ -30,7 +35,12 @@ export default defineConfig({
         defaultLocale: "en", // All urls that don't contain language prefix will be treated as default locale
         locales: {
           en: "en", // The `defaultLocale` value must present in `locales` keys
+          de: "de",
+          es: "es",
+          fa: "fa",
           fr: "fr",
+          ja: "ja",
+          "zh-cn": "zh-cn",
         },
       },
     }),
